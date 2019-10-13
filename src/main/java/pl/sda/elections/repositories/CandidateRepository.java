@@ -17,4 +17,8 @@ public class CandidateRepository {
         candidateList.add(new Candidate(6L, "Secundus", "Pythonowy"));
         candidateList.add(new Candidate(7L, "Primus", "Pythonowy"));
     }
+
+    public Candidate findById(Long id) {
+        return candidateList.stream().filter(x -> id.equals(x.getId())).findFirst().get();
+    }
 }
