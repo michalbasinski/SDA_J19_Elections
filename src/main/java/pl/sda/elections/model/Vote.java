@@ -5,6 +5,9 @@ public class Vote {
     private Long candidateId;
     private Long electionsId;
 
+    public Vote() {
+    }
+
     public Vote(Long candidateId, Long electionsId) {
         this.candidateId = candidateId;
         this.electionsId = electionsId;
