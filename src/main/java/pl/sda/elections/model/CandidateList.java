@@ -3,6 +3,7 @@ package pl.sda.elections.model;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+//Odpowiednik w SQL: tabela asocjacyjna
 @AllArgsConstructor
 @Getter
 public class CandidateList {
