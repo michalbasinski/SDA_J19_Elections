@@ -48,8 +48,10 @@ public class VoteRepository {
         return vote;
     }
 
-    public List<Vote> getVotes() {
-        return this.votes;
+    public List<Vote> getVotes(Long electionsId) {
+        return this.votes.stream()
+                .filter(x -> electionsId.equals(x.getElectionsId()))
+                .collect(Collectors.toList());
     }
 
     private Long findMaxId(List<Vote> votes) {

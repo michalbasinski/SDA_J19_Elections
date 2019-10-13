@@ -13,10 +13,6 @@ public class CandidateListRepository {
     private CandidateRepository candidateRepository;
 
     public CandidateListRepository(CandidateRepository candidateRepository) {
-        this.candidateRepository = candidateRepository;
-    }
-
-    public CandidateListRepository() {
         candidateLists.add(new CandidateList(0L, 0L, 0L));
         candidateLists.add(new CandidateList(1L, 1L, 0L));
         candidateLists.add(new CandidateList(2L, 3L, 3L));
@@ -24,6 +20,8 @@ public class CandidateListRepository {
         candidateLists.add(new CandidateList(4L, 5L, 4L));
         candidateLists.add(new CandidateList(5L, 6L, 3L));
         candidateLists.add(new CandidateList(6L, 7L, 3L));
+
+        this.candidateRepository = candidateRepository;
     }
 
     public List<Candidate> findCandidatesByListId(Long listId) {
