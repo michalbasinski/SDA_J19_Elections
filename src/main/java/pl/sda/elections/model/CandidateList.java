@@ -5,8 +5,8 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public class Candidate {
+public class CandidateList {
     private Long id;
-    private String name;
-    private String lastName;
+    private Long candidateId;
+    private Long listId;
 }

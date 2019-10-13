@@ -3,10 +3,11 @@ package pl.sda.elections.model;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.time.LocalDate;
+
 @AllArgsConstructor
 @Getter
-public class Candidate {
+public class Elections {
     private Long id;
-    private String name;
-    private String lastName;
+    private LocalDate date;
 }
