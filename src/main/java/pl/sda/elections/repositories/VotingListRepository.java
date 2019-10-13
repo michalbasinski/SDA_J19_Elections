@@ -5,6 +5,7 @@ import pl.sda.elections.model.VotingList;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class VotingListRepository {
     private List<VotingList> votingLists = new ArrayList<>();
@@ -22,5 +23,11 @@ public class VotingListRepository {
 
     public List<Candidate> findCandidatesByListIdAndElectionsId(Long listId, Long electionsId) {
         return candidateListRepository.findCandidatesByListId(listId);
+    }
+
+    public List<VotingList> getVotingListsByElectionsId(Long electionsId) {
+        return votingLists.stream()
+                .filter(x -> electionsId.equals(x.getElectionsId()))
+                .collect(Collectors.toList());
     }
 }

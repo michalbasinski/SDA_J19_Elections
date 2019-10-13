@@ -25,9 +25,9 @@ public class VoteCounter {
                 .map(x -> x.getId())
                 .collect(Collectors.toList());
 
-        return Long.valueOf(votes.stream()
+        return (long) votes.stream()
                 .filter(x -> collect.contains(x.getCandidateId()))
-                .collect(Collectors.toList()).size());
+                .collect(Collectors.toList()).size();
 
     }
 }
